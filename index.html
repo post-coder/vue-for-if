@@ -35,18 +35,25 @@
         
         <h1>Portfolio</h1>
 
-        <ul>
+        <!-- 
+            v-if effettua il controllo sulla condizione indicata,
+            se il controllo è vero, visualizza il tag e tutto il suo contenuto.
+            se il controllo è falso, NON visualizza il tag E NON VISUALIZZA IL SUO CONTENUTO.
+            qui dentro possiamo scrivere tutto quello che avremmo potuto scrivere
+            dentro un if() di JS
+         -->
+        <ul v-if="persona.abilitato">
             <li>
-                Nome: {{ persona.nome }}
+                {{ persona.nome }}
             </li>
             <li>
-                Cognome: {{ persona.cognome }}
+                {{ persona.cognome }}
             </li>
             <li>
-                Età: {{ persona.eta }}
+                {{ persona.eta }}
             </li>
-            <li :class="coloriPreferiti[3]">
-                Primo colore preferito: {{ coloriPreferiti[0] }}
+            <li>
+                {{ persona.ruolo }}
             </li>
         </ul>
 

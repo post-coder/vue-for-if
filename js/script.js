@@ -9,7 +9,9 @@ createApp({
             persona: {
                 nome: 'Andrea',
                 cognome: 'Rossi',
-                eta: 27
+                eta: 27,
+                ruolo: 'Web Developer',
+                abilitato: true,
             },
 
 
