@@ -9,23 +9,6 @@
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <style>
-        .rosso  {
-            color: red;
-        }
-
-        .verde  {
-            color: green;
-        }
-
-        .blu  {
-            color: blue;
-        }
-
-        .arancione  {
-            color: orange;
-        }
-    </style>
 </head>
 <body>
     <!-- VUE 3 -->
@@ -33,34 +16,13 @@
 
     <div id="app" class="container py-5">
         
-        <h1>Portfolio</h1>
+        <h1>Metodi in Vue</h1>
 
-        <ul v-if="mostraColori == true">
-            <!--
-                 il v-show funziona come un v-if, ma è meno invasivo:
-                non cancella l'elemento dalla pagina, semplicemente
-                gli applica un "display: none"
-                accetta le stesse condizioni del v-if (quindi come l'if di JavaScript).
-
-                il v-show NON HA v-else, il v-else è solo per il v-if
-            -->
-
-            <!-- 
-                con il v-for, se vogliamo mostrare o meno degli elementi
-                DOBBIAMO usare il v-show, NON il v-if
-            -->
-
-            <li v-for="coloreAttuale in coloriPreferiti" :class="coloreAttuale" v-show="coloreAttuale == 'verde' || coloreAttuale=='arancione'"> 
-
-                {{ coloreAttuale }}
-
-            </li>
-        </ul>
-        <div v-else>
-            <p>
-                Per qualche motivo non possiamo mostrare i colori.
-            </p>
+        <div class="p-5 text-center ">
+            {{ contatore }}
         </div>
+
+        <button @click="aumentaNumero()" v-if="contatore < 20">Cliccami</button>
 
     </div>
 
