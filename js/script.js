@@ -22,6 +22,8 @@ createApp({
                 'viola',
                 'aquamarine'
             ],
+
+            mostraColori: true,
             
         }
     }

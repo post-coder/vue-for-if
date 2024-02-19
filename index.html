@@ -35,13 +35,32 @@
         
         <h1>Portfolio</h1>
 
-        <ul>
-            <li v-for="pippo in coloriPreferiti" :class="pippo"> 
+        <ul v-if="mostraColori == true">
+            <!--
+                 il v-show funziona come un v-if, ma è meno invasivo:
+                non cancella l'elemento dalla pagina, semplicemente
+                gli applica un "display: none"
+                accetta le stesse condizioni del v-if (quindi come l'if di JavaScript).
 
-                {{ pippo }}
+                il v-show NON HA v-else, il v-else è solo per il v-if
+            -->
+
+            <!-- 
+                con il v-for, se vogliamo mostrare o meno degli elementi
+                DOBBIAMO usare il v-show, NON il v-if
+            -->
+
+            <li v-for="coloreAttuale in coloriPreferiti" :class="coloreAttuale" v-show="coloreAttuale == 'verde' || coloreAttuale=='arancione'"> 
+
+                {{ coloreAttuale }}
 
             </li>
         </ul>
+        <div v-else>
+            <p>
+                Per qualche motivo non possiamo mostrare i colori.
+            </p>
+        </div>
 
     </div>
 
