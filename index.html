@@ -45,7 +45,7 @@
                     :src="image" 
                     :alt=" `Anteprima ` + (index + 1)"
                     @click="changeSlide(index)"
-                    
+                    :class=" index == activeSlideIndex ? 'active' : '' "
                 >
             </div>
 

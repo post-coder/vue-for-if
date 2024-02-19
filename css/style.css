@@ -40,6 +40,9 @@ header {
     opacity: .3;
 }
 
+#thumbnails img.active {
+    opacity: 1;
+}
 
 /* arrows */
 
