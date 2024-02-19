@@ -7,11 +7,10 @@ createApp({
         return {
 
             persona: {
-                nome: 'Andrea',
+                nome: 'Mario',
                 cognome: 'Rossi',
-                eta: 27,
-                ruolo: 'Web Developer',
-                abilitato: true,
+                eta: 19,
+                ruolo: 'Data Analyst',
             },
 
 
@@ -25,3 +24,6 @@ createApp({
         }
     }
 }).mount('#app');
+
+
+
