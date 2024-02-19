@@ -21,10 +21,6 @@ createApp({
             
             this.contatore++;
 
-            if(this.contatore >= 20) {
-                this.contatore = 0;
-            }
-
         },
 
     },
