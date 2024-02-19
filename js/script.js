@@ -19,6 +19,8 @@ createApp({
                 'verde',
                 'blu',
                 'arancione',
+                'viola',
+                'aquamarine'
             ],
             
         }

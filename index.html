@@ -35,54 +35,13 @@
         
         <h1>Portfolio</h1>
 
-        <!-- 
-            v-if effettua il controllo sulla condizione indicata,
-            se il controllo è vero, visualizza il tag e tutto il suo contenuto.
-            se il controllo è falso, NON visualizza il tag E NON VISUALIZZA IL SUO CONTENUTO.
-            qui dentro possiamo scrivere tutto quello che avremmo potuto scrivere
-            dentro un if() di JS
-         -->
-        <ul v-if="persona.eta >= 18">
-            <li>
-                {{ persona.nome }}
-            </li>
-            <li>
-                {{ persona.cognome }}
-            </li>
-            <li>
-                {{ persona.eta }}
-            </li>
-            <li>
-                {{ persona.ruolo }}
+        <ul>
+            <li v-for="pippo in coloriPreferiti" :class="pippo"> 
+
+                {{ pippo }}
+
             </li>
         </ul>
-        <div v-else>
-            Questo utente non può essere mostrato perchè è minorenne
-        </div>
-
-
-        <div v-if="persona.ruolo == 'Web Developer' ">
-            
-            Questa persona ha studiato WD su Boolean
-
-        </div>
-
-        <strong v-else-if="persona.ruolo == 'Data Analyst'">
-
-            Questa persona ha studiato DA su Boolean
-
-            <!-- possiamo annidare gli if -->
-            <!-- questo if verrà letto solo se il v-if in cui è contenuto è vero -->
-            <div v-if="persona.nome == 'Mario'">
-                Si chiama Mario. Come Super Mario.
-            </div>
-
-        </strong>
-        
-        <em v-else>
-            Questa persona sicuramente non ha studiato in Boolean
-        </em>
-
 
     </div>
 
