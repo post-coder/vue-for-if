@@ -24,6 +24,14 @@
 
         <button @click="aumentaNumero()" v-if="contatore < 20">Cliccami</button>
 
+        <br>
+        <br>
+
+        <div class="my-3">
+            
+            <input name="cosa" type="text" placeholder="Nome" v-model="nome">
+            <button @click="saluta()">Saluta</button>
+        </div>
     </div>
 
     <script src="js/script.js">

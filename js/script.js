@@ -7,6 +7,13 @@ createApp({
         return {
 
             contatore: 0,
+            nome: '',
+
+            nomi: [
+                'Christian',
+                'Francesco',
+                'Mattia'
+            ]
             
         }
     },
@@ -18,10 +25,14 @@ createApp({
             // per accedere ad una proprietà che abbiamo salvato nei data
             // dobbiamo scrivere il "this." davanti al nome della variabile
             
-            
             this.contatore++;
+            // cambiando il valore di contatore, si aggiorna ovunque abbiamo richiamato questa variabile
 
         },
+
+        saluta() {
+            alert("Ciao " + this.nome)
+        }
 
     },
 }).mount('#app');
